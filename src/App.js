@@ -9,6 +9,7 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 /** components */
 import HomePage from './pages/HomePage/HomePage';
 import CatchPokemonPage from './pages/CatchPokemonPage/CatchPokemonPage';
+import NavBar from './components/navBar/NavBar';
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
       <CssBaseline />
       <Router>
         <Provider store={store}>
+          <NavBar />
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/catchPokemon" component={CatchPokemonPage} />
+            <Route path="/catch" component={CatchPokemonPage} />
           </Switch>
         </Provider>
       </Router>
