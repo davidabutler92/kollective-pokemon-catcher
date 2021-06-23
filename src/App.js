@@ -1,7 +1,6 @@
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
-/** styles */
+import store from './state/store';
 
 /** material ui components */
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -16,12 +15,12 @@ function App() {
     <main>
       <CssBaseline />
       <Router>
-        {/* <Provider> */}
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/catchPokemon" component={CatchPokemonPage} />
-        </Switch>
-        {/* </Provider> */}
+        <Provider store={store}>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/catchPokemon" component={CatchPokemonPage} />
+          </Switch>
+        </Provider>
       </Router>
     </main>
   );
