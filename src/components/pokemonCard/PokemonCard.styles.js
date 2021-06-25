@@ -22,10 +22,10 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     width: '100%',
-    backgroundColor: theme.palette.secondary.light,
+    backgroundColor: '#ff867c',
     color: 'white',
     '&:hover': {
-      backgroundColor: theme.palette.secondary.dark,
+      backgroundColor: '#b61827',
     },
   },
   cardAction: {
