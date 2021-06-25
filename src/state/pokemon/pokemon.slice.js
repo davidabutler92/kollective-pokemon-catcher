@@ -1,22 +1,40 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { act } from 'react-dom/cjs/react-dom-test-utils.production.min';
 import { getRandomPokemon } from '../../services/pokeApi';
 
-const fetchPokemon = createAsyncThunk('pokemon/fetchPokemon', async () => {
-  const response = await getRandomPokemon();
-  return response;
-});
+export const fetchRandomPokemon = createAsyncThunk(
+  'pokemon/fetchRandomPokemon',
+  async () => {
+    const response = await getRandomPokemon();
+    return response;
+  }
+);
 
 const initialState = {
-  byId: {},
-  allIds: [],
+  pokemon: [],
+  caughtPokemon: [],
   isLoading: false,
 };
 
 const pokemonSlice = createSlice({
   name: 'pokemon',
   initialState,
-  reducer: {},
-  extraReducers: {},
+  reducers: {
+    addCaughtPokemon: (state, action) => {
+      state.caughtPokemon = [...state.caughtPokemon, action.payload];
+    },
+  },
+  extraReducers: {
+    [fetchRandomPokemon.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [fetchRandomPokemon.fulfilled]: (state, action) => {
+      state.pokemon = action.payload;
+      state.isLoading = false;
+    },
+    [fetchRandomPokemon.rejected]: () => {},
+  },
 });
 
+export const { addCaughtPokemon } = pokemonSlice.actions;
 export default pokemonSlice.reducer;
