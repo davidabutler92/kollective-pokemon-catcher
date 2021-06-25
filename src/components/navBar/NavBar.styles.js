@@ -9,10 +9,6 @@ const useStyles = makeStyles((theme) => ({
   toolBar: {
     backgroundColor: theme.palette.secondary.main,
   },
-  link: {
-    textDecoration: 'none',
-    color: 'white',
-  },
 }));
 
 export default useStyles;

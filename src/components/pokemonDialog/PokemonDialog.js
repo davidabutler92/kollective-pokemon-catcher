@@ -32,7 +32,7 @@ export default function PokemonDialog({
   return (
     <Dialog open={isOpen} onClose={handleClickClose}>
       <DialogTitle>
-        {selectedPokemon.name} was added to the Pokedex!
+        {selectedPokemon?.name} was added to the Pokedex!
       </DialogTitle>
       <form
         onSubmit={(e) =>
@@ -50,14 +50,11 @@ export default function PokemonDialog({
       >
         <DialogContent>
           <DialogContentText>
-            Give {selectedPokemon.name} a nickname?
+            Give {selectedPokemon?.name} a nickname?
           </DialogContentText>
           <TextField
             autoFocus
-            margin="dense"
-            id="nickname"
             label="nickname"
-            type="nickname"
             fullWidth
             value={nickname}
             onChange={(e) => handleNicknameChange({ e, setNickname })}

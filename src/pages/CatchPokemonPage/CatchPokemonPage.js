@@ -26,14 +26,14 @@ export function CatchPokemonPage() {
   }, []);
 
   return (
-    <Container>
-      {pokemonState.isLoading ? (
+    <Container data-testid="catch-pokemon-page">
+      {pokemonState?.isLoading ? (
         <div className={classes.progressSpinnerDiv}>
           <CircularProgress size={100} />
         </div>
       ) : (
         <Grid container spacing={3} className={classes.root}>
-          {pokemonState.pokemon.map((pokemon, index) => {
+          {pokemonState?.pokemon.map((pokemon, index) => {
             return (
               <Grid
                 item

@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    height: 350,
   },
   progressSpinnerDiv: {
     height: '90vh',

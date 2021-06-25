@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { act } from 'react-dom/cjs/react-dom-test-utils.production.min';
 import { getRandomPokemon } from '../../services/pokeApi';
 
 export const fetchRandomPokemon = createAsyncThunk(

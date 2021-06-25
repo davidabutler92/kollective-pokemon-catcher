@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   getCaughtPokemon,
   getIsCaughtPokemonEmpty,
 } from '../../state/pokemon/pokemon.selectors';
 import { getFromLocalStorage } from '../../data/localstorage.helpers';
-import { useDispatch } from 'react-redux';
 import { addCaughtPokemon } from '../../state/pokemon/pokemon.slice';
 
 /** components */
@@ -32,9 +31,9 @@ export default function HomePage() {
   }, []);
 
   return (
-    <Container>
+    <Container data-testid="home-page">
       <Grid container spacing={3} className={classes.root}>
-        {pokemon.map((pokemon, index) => {
+        {pokemon?.map((pokemon, index) => {
           return (
             <Grid
               item
