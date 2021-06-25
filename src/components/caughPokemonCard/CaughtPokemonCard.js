@@ -16,16 +16,16 @@ export default function CaughtPokemonCard({ pokemon, index }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} data-testid="caugh-pokemon-card">
       <CardActionArea onClick={() => handleCardActionClick({ index, history })}>
-        <CardHeader title={pokemon.name} className={classes.text} />
+        <CardHeader title={pokemon?.name} className={classes.text} />
         <CardMedia
-          image={pokemon.sprites.front_default}
+          image={pokemon?.sprites?.front_default}
           className={classes.media}
         />
         <CardContent>
           <Typography className={classes.text}>
-            Type: {pokemon?.types[0]?.type?.name}
+            Type: {pokemon?.types?.[0]?.type?.name}
           </Typography>
         </CardContent>
       </CardActionArea>
