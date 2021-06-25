@@ -1,9 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
+    fontWeight: 900,
+    color: 'white',
   },
-});
+  toolBar: {
+    backgroundColor: theme.palette.secondary.main,
+  },
+  link: {
+    textDecoration: 'none',
+    color: 'white',
+  },
+}));
 
 export default useStyles;

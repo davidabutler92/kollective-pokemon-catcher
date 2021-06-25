@@ -1,5 +1,6 @@
 import React from 'react';
 import useStyles from './NavBar.styles';
+import { Link } from 'react-router-dom';
 
 /** material ui components */
 import AppBar from '@material-ui/core/AppBar';
@@ -13,9 +14,11 @@ export default function NavBar() {
   const classes = useStyles();
   return (
     <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" className={classes.title}>
-          Pokemon Catcher
+      <Toolbar className={classes.toolBar}>
+        <Typography variant="h4" className={classes.title}>
+          <Link className={classes.link} to="/">
+            Pokemon Catcher
+          </Link>
         </Typography>
         <CatchPokemonButton />
       </Toolbar>
