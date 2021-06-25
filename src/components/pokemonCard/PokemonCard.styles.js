@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   button: {
-    display: 'block',
     width: '100%',
     backgroundColor: theme.palette.secondary.light,
     color: 'white',
