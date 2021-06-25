@@ -1,6 +1,5 @@
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { getFromLocalStorage } from './data/localstorage.helpers';
 import store from './state/store';
 import theme from './themes/main-theme';
 

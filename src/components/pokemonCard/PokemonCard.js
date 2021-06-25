@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useStyles from './PokemonCard.styles';
+import { handleCardActionClick } from './PokemonCard.helpers';
 
 /** material ui components */
 import Card from '@material-ui/core/Card';
@@ -20,14 +21,18 @@ export default function PokemonCard({
   const [isDisabled, setIsDisabled] = useState(true);
   const classes = useStyles();
 
-  const handleCardActionClick = () => {
-    setIsDisabled(!isDisabled);
-    setPokemonIndex(index);
-  };
-
   return (
     <Card className={classes.root}>
-      <CardActionArea onClick={handleCardActionClick}>
+      <CardActionArea
+        onClick={() =>
+          handleCardActionClick({
+            setIsDisabled,
+            isDisabled,
+            setPokemonIndex,
+            index,
+          })
+        }
+      >
         <CardHeader title={pokemon?.name} className={classes.text} />
         <CardMedia
           image={pokemon.sprites.front_default}
