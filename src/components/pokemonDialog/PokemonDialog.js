@@ -56,7 +56,7 @@ export default function PokemonDialog({
             autoFocus
             margin="dense"
             id="nickname"
-            label="Nickname..."
+            label="nickname"
             type="nickname"
             fullWidth
             value={nickname}

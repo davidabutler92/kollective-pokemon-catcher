@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRandomPokemon } from '../../state/pokemon/pokemon.slice';
 import { getPokemonState } from '../../state/pokemon/pokemon.selectors';
+import { handleClickClose, handleClickOpen } from './CatchPokemon.helpers';
 
 /** components */
 import PokemonCard from '../../components/pokemonCard/PokemonCard';
@@ -14,19 +15,11 @@ import Container from '@material-ui/core/Container';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 export function CatchPokemonPage() {
+  const classes = useStyles();
+  const dispatch = useDispatch();
   const pokemonState = useSelector(getPokemonState);
   const [isOpen, setIsOpen] = useState(false);
   const [pokemonIndex, setPokemonIndex] = useState('');
-  const classes = useStyles();
-  const dispatch = useDispatch();
-
-  const handleClickOpen = () => {
-    setIsOpen(true);
-  };
-
-  const handleClickClose = () => {
-    setIsOpen(false);
-  };
 
   useEffect(() => {
     dispatch(fetchRandomPokemon());
@@ -54,14 +47,14 @@ export function CatchPokemonPage() {
                   index={index}
                   pokemon={pokemon}
                   setPokemonIndex={setPokemonIndex}
-                  handleClickOpen={handleClickOpen}
+                  handleClickOpen={() => handleClickOpen(setIsOpen)}
                 />
               </Grid>
             );
           })}
           <PokemonDialog
             pokemonIndex={pokemonIndex}
-            handleClickClose={handleClickClose}
+            handleClickClose={() => handleClickClose(setIsOpen)}
             isOpen={isOpen}
           />
         </Grid>
