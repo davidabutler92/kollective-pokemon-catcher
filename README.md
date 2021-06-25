@@ -27,13 +27,13 @@
 * Open project in text editor to view code
 * From terminal, npm install
 * From terminal, npm start
-* To see on netlify [Click here]()
+* To see on netlify [Click here](https://vigilant-booth-d488b9.netlify.app/catch)
 
 ## Known Bugs 
 #### There are no known bugs at the time.
 
 ## Support and Contact Details
-* davidabutler92@yahoo.com
+* davidabutler92@gmail.com
 
 ## Technologies Used 
 #### HTML
