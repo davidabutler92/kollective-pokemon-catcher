@@ -23,7 +23,7 @@ export function CatchPokemonPage() {
 
   useEffect(() => {
     dispatch(fetchRandomPokemon());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Container data-testid="catch-pokemon-page">

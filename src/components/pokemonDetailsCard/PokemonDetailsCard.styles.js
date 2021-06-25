@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   card: {
     height: '100%',
-    width: 700,
+    maxWidth: 700,
     margin: 'auto',
     padding: 30,
   },

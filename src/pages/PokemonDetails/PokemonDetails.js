@@ -29,7 +29,7 @@ export default function PokemonDetails() {
         dispatch(addCaughtPokemon(pokemon));
       });
     }
-  }, []);
+  }, [dispatch, isCaughtPokemonEmpty]);
 
   return (
     <Container className={classes.root} data-testid="">

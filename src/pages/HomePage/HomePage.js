@@ -28,7 +28,7 @@ export default function HomePage() {
         dispatch(addCaughtPokemon(pokemon));
       });
     }
-  }, []);
+  }, [dispatch, isCaughtPokemonEmpty]);
 
   return (
     <Container data-testid="home-page">
