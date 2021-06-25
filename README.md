@@ -11,7 +11,7 @@
 * a list of all the caught pokemon. Clicking on a pokemon will take users to a page for that pokemon.
 * A “Catch pokemon” button. Clicking it takes the user to the Catch a Pokemon Page
 #### Catch A Pokemon Step
-* Will show 10 different pokemon. Get 10 pokemon from the open pokemon api e.g  [Click here](https://pokeapi.co/api/v2/pokemon?offset=20&limit=20)
+* Will show 10 different pokemon. Get 10 pokemon from the open pokemon api e.g  [Click here](https://pokeapi.co/docs/v2)
 * A user will click on a pokemon to select it, which will enable the catch pokemon button
 * Clicking the catch pokemon button will enable you to name the pokemon
 #### Name A Pokemon Step
