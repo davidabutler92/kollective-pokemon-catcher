@@ -27,7 +27,7 @@
 * Open project in text editor to view code
 * From terminal, npm install
 * From terminal, npm start
-* To see on netlify [Click here](https://vigilant-booth-d488b9.netlify.app/catch)
+* To see on netlify [Click here](https://vigilant-booth-d488b9.netlify.app/)
 
 ## Known Bugs 
 #### There are no known bugs at the time.
