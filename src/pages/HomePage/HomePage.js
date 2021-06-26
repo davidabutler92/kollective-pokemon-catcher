@@ -32,7 +32,7 @@ export default function HomePage() {
 
   return (
     <Container data-testid="home-page">
-      <Grid container spacing={3} className={classes.root}>
+      <Grid container spacing={3}>
         {pokemon?.map((pokemon, index) => {
           return (
             <Grid

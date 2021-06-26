@@ -32,7 +32,7 @@ export function CatchPokemonPage() {
           <CircularProgress size={100} />
         </div>
       ) : (
-        <Grid container spacing={3} className={classes.root}>
+        <Grid container spacing={3}>
           {pokemonState?.pokemon.map((pokemon, index) => {
             return (
               <Grid

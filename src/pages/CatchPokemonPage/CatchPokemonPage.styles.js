@@ -4,7 +4,6 @@ import { HEADER_HEIGHT } from '../../constants';
 const useStyles = makeStyles({
   root: {
     minHeight: `calc(100vh - ${HEADER_HEIGHT}vh)`,
-    marginTop: 20,
   },
   gridItem: {
     display: 'flex',
